@@ -13,34 +13,35 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
         body: Row(
-          children: [Text('wallet')],
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Center(
+            
+              child: Icon(Icons.filter_vintage_sharp),
+            ),
+            SizedBox(
+              width: 100,
+            ),
+            Center(
+              child: Text(
+                'Wallet',
+                style: TextStyle(color: Colors.black, fontFamily: 'manrope'),
+              ),
+            ),
+            SizedBox(
+              width: 100,
+            ),
+            Center(
+              child: Icon(Icons.scanner_sharp),
+            )
+          ],
         ),
       ),
-    );
-  }
-}
-
-class StatussBar extends StatefulWidget {
-  const StatussBar({super.key});
-
-  @override
-  _StatussBarState createState() => _StatussBarState();
-}
-
-class _StatussBarState extends State {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: const Row(children: [
-        Text('WALLET'),
-        Icon(
-          Icons.settings,
-        )
-      ]),
     );
   }
 }
